@@ -12,7 +12,7 @@ import java.util.Date;
 
 public class WaterSourceReport {
 
-    private static int reports = 0;
+    public static int reports = 0;
 
     private Date date;
     private int reportNumber;
