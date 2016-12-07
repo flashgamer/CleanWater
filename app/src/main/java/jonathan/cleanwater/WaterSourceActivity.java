@@ -37,7 +37,7 @@ public class WaterSourceActivity extends AppCompatActivity {
     }
 
     public void submitWaterSourceReport(View view) {
-        StorageReference store = storage.getReferenceFromUrl("gs://water-app-63f4a.appspot.com/");
+
         Intent intent = new Intent(this, WaterSourceSubmitActivity.class);
         startActivity(intent);
     }

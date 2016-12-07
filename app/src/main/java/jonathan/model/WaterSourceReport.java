@@ -4,6 +4,8 @@ import android.content.Context;
 import android.location.Geocoder;
 import android.location.Location;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.Date;
 
 /**
@@ -12,27 +14,27 @@ import java.util.Date;
 
 public class WaterSourceReport {
 
-    public static int reports = 0;
+    private static int reports = 0;
 
     private Date date;
     private int reportNumber;
     private String user;
-    private String location;
+    private LatLng location;
     private WaterCondition condition;
     private WaterType type;
 
     public WaterSourceReport() {
-
+        date = new Date(System.currentTimeMillis());
+        reportNumber = reports++;
     }
 
-    public WaterSourceReport(String user, String location, WaterCondition condition, WaterType type) {
+    public WaterSourceReport(String user, LatLng location, WaterCondition condition, WaterType type) {
         date = new Date(System.currentTimeMillis());
         reportNumber = reports++;
         this.user = user;
         this.condition = condition;
         this.type= type;
         this.location = location;
-        // Geocoder geocoder = new Geocoder();
     }
 
     public static int getReports() {
@@ -51,7 +53,7 @@ public class WaterSourceReport {
         return user;
     }
 
-    public String getLocation() {
+    public LatLng getLocation() {
         return location;
     }
 
@@ -75,7 +77,7 @@ public class WaterSourceReport {
         this.user = user;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(LatLng location) {
         this.location = location;
     }
 
@@ -86,4 +88,5 @@ public class WaterSourceReport {
     public void setType(WaterType type) {
         this.type = type;
     }
+
 }

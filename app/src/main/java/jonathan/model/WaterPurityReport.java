@@ -1,5 +1,7 @@
 package jonathan.model;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.util.Date;
 
 /**
@@ -7,19 +9,21 @@ import java.util.Date;
  */
 
 public class WaterPurityReport {
+    private static int reports = 0;
+
     private Date date;
     private int reportNumber;
     private String user;
-    private String location;
+    private LatLng location;
     private PurityCondition condition;
     private double virusPPM;
     private double contaminantPPM;
 
     public WaterPurityReport() {}
 
-    public WaterPurityReport(String user, String location, PurityCondition condition, double virus, double contaminant) {
+    public WaterPurityReport(String user, LatLng location, PurityCondition condition, double virus, double contaminant) {
         date = new Date(System.currentTimeMillis());
-        reportNumber = WaterSourceReport.reports++;
+        reportNumber = reports++;
         this.user = user;
         this.location = location;
         this.condition = condition;
@@ -51,11 +55,11 @@ public class WaterPurityReport {
         this.user = user;
     }
 
-    public String getLocation() {
+    public LatLng getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
+    public void setLocation(LatLng location) {
         this.location = location;
     }
 
