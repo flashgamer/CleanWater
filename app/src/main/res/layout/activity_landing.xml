@@ -9,18 +9,36 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="jonathan.cleanwater.LandingActivity">
-<GridLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-    <Button
-        android:text="@string/view_source_reports"
-        android:onClick="handleViewSourceReports"/>
-    <Button
-        android:text="@string/view_purity_reports"
-        android:onClick="handleViewPurityReports"/>
-    <Button
-        android:text="@string/view_availability"
-        android:onClick="handleMap"/>
-</GridLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp"
+        android:orientation="vertical">
+
+        <Button
+            android:text="@string/view_source_reports"
+            android:onClick="handleViewSourceReports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:text="@string/view_purity_reports"
+            android:onClick="handleViewPurityReports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:text="@string/view_availability"
+            android:onClick="handleMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+    </LinearLayout>
 </RelativeLayout>
