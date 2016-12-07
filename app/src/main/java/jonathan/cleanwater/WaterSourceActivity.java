@@ -25,7 +25,7 @@ public class WaterSourceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_water_source);
 
         ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_water_source);
-        ListView listView = (ListView) findViewById(R.id.report_list);
+        ListView listView = (ListView) findViewById(R.id.source_report_list);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
