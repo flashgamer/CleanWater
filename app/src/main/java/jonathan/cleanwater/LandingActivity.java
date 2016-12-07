@@ -13,8 +13,14 @@ public class LandingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_landing);
     }
 
-    public void handleViewReports(View view) {
+    public void handleViewSourceReports(View view) {
+        Intent intent = new Intent(this, WaterSourceActivity.class);
+        startActivity(intent);
+    }
 
+    public void handleViewPurityReports(View view) {
+        Intent intent = new Intent(this, WaterPurityActivity.class);
+        startActivity(intent);
     }
 
     public void handleMap(View view) {

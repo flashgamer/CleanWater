@@ -21,11 +21,11 @@ public class WaterSourceReport {
     private WaterCondition condition;
     private WaterType type;
 
-    WaterSourceReport() {
+    public WaterSourceReport() {
 
     }
 
-    WaterSourceReport(String user, String location, WaterCondition condition, WaterType type) {
+    public WaterSourceReport(String user, String location, WaterCondition condition, WaterType type) {
         date = new Date(System.currentTimeMillis());
         reportNumber = reports++;
         this.user = user;
@@ -61,5 +61,29 @@ public class WaterSourceReport {
 
     public WaterType getType() {
         return type;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public void setReportNumber(int reportNumber) {
+        this.reportNumber = reportNumber;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setCondition(WaterCondition condition) {
+        this.condition = condition;
+    }
+
+    public void setType(WaterType type) {
+        this.type = type;
     }
 }

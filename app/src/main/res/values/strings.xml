@@ -1,11 +1,18 @@
 <resources>
     <string name="app_name">H2CLEAN</string>
-    <string name="title_text">H2CLEAN</string>
+    <string name="title_text">h2clean</string>
     <string name="button_login">Login</string>
     <string name="button_register">Register</string>
     <string name="prompt_username">Username</string>
     <string name="prompt_password">Password</string>
-    <string name="view_reports">View Reports</string>
+    <string name="view_source_reports">View Source Reports</string>
     <string name="view_availability">View Map</string>
     <string name="title_activity_maps">Map</string>
+    <string name="add_report">Add New Report</string>
+    <string name="location">Location</string>
+    <string name="condition">Water Condition</string>
+    <string name="type">Water Type</string>
+    <string name="purity">Purity Condition</string>
+    <string name="submit">Submit Report</string>
+    <string name="view_purity_reports">View Purity Reports</string>
 </resources>
