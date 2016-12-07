@@ -32,7 +32,10 @@ public enum WaterType {
             map.put(w.getMyType(), w);
         }
     }
-
+    @Override
+    public String toString() {
+        return myType;
+    }
     public static WaterType findByKey(String s) {
         return map.get(s);
     }

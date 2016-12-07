@@ -31,6 +31,11 @@ public enum WaterCondition {
         }
     }
 
+    @Override
+    public String toString() {
+        return myCondition;
+    }
+
     public static WaterCondition findByKey(String s) {
         return map.get(s);
     }

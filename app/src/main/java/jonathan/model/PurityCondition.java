@@ -30,6 +30,10 @@ public enum PurityCondition {
         }
     }
 
+    @Override
+    public String toString() {
+        return myType;
+    }
     public static PurityCondition findByKey(String s) {
         return map.get(s);
     }
